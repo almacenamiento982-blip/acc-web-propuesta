@@ -161,6 +161,27 @@ footer{background:var(--tinta);color:rgba(255,255,255,.75);padding:70px 0 30px;f
 .js .rev.oculto{opacity:0;transform:translateY(26px)}
 
 
+
+/* reglas */
+.reglas-cab{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.reglas-cab .titulo{text-align:left;margin:0}
+.reglas-cab .titulo p{margin:14px 0 0}
+.nota-2026{display:inline-block;background:#fff4d6;color:#7a5a00;border:1px solid #ecd28a;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:600}
+.reglas{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.regla{background:#fff;border:1px solid var(--linea-osc);border-radius:14px;overflow:hidden}
+.regla summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:14px;font-weight:700;font-size:15px}
+.regla summary::-webkit-details-marker{display:none}
+.regla summary .n{font-family:Anton,sans-serif;font-weight:400;color:var(--oro);font-size:20px;margin-right:12px}
+.regla summary:after{content:"+";font-size:22px;color:var(--gris);transition:transform .2s}
+.regla[open] summary:after{transform:rotate(45deg)}
+.regla ul{padding:0 22px 20px 40px;margin:0;color:#45474C;font-size:14.5px;display:grid;gap:7px}
+.regla .tabla-r{overflow-x:auto;padding:0 22px 14px}
+.regla table{border-collapse:collapse;font-size:14px;width:100%;min-width:380px}
+.regla td,.regla th{border-bottom:1px solid var(--linea-osc);padding:8px 6px;text-align:left}
+.regla th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.reglas-pie{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:24px}
+.reglas-pie small{color:var(--gris)}
+
 /* aviso de propuesta (solo para la revisión) */
 .aviso{position:fixed;left:16px;bottom:16px;z-index:60;background:#fff;color:var(--tinta);border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.25);padding:12px 16px;font-size:13px;max-width:330px;line-height:1.45}
 .aviso b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--oro);margin-bottom:2px}
@@ -168,6 +189,7 @@ footer{background:var(--tinta);color:rgba(255,255,255,.75);padding:70px 0 30px;f
 
 /* ---------- móvil ---------- */
 @media (max-width:900px){
+  .reglas{grid-template-columns:1fr}
   nav,.barra .btn{display:none}
   .menu-btn{display:block}
   header.abierto nav{display:block;position:absolute;top:76px;left:0;right:0;background:rgba(12,12,13,.97);padding:10px 24px 24px}
@@ -202,9 +224,10 @@ footer{background:var(--tinta);color:rgba(255,255,255,.75);padding:70px 0 30px;f
     <a href="#inicio" class="marca"><img src="assets/escudo_blanco.png" alt="Adidas Champions Cup"><span>ADIDAS<br>CHAMPIONS CUP<small>TAMPA · 2027</small></span></a>
     <nav aria-label="Main"><ul>
       <li><a href="#divisions">Divisions & Fees</a></li>
-      <li><a href="#about">The Tournament</a></li>
+      <li><a href="#about">Tournament</a></li>
       <li><a href="#venues">Venues</a></li>
       <li><a href="#hotels">Hotels</a></li>
+      <li><a href="#rules">Rules</a></li>
       <li><a href="https://simaxsports.com/pages/adidas-champions-cup-2026">Store</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul></nav>
@@ -322,8 +345,34 @@ footer{background:var(--tinta);color:rgba(255,255,255,.75);padding:70px 0 30px;f
       </div>
       <div class="der">
         <a class="btn" href="https://booking.roomvy.com/events/e951b1f6-60e4-4d09-ab55-05d2b6719aa7">Book hotel <span class="flecha">→</span></a>
-        <a class="btn btn-linea" href="https://www.adidaschampionscup.com/registration">Rules &amp; eligibility</a>
+        <a class="btn btn-linea" href="#rules">Rules &amp; eligibility</a>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="rules" style="background:var(--papel)">
+  <div class="env">
+    <div class="reglas-cab rev">
+      <div class="titulo"><div class="kicker">— Rules &amp; Eligibility —</div><h2 class="display">Tournament <span class="serif">rules</span></h2><p>Everything teams need to know before kickoff. Tap a topic to open it.</p></div>
+      <span class="nota-2026">Based on the 2026 rules · 2027 update pending</span>
+    </div>
+    <div class="reglas">
+      <details class="regla" open><summary><span><span class="n">01</span>Registration &amp; eligibility</span></summary><ul><li>Open to teams of properly registered youth players from all Federation organizations (USYS, US Club, FYSA Super-Y, etc.), in good standing with their association.</li><li>All players and coaches need current, valid, laminated passes with photo, date of birth and registrar signature.</li><li>State Associations or Federation Affiliates certify eligibility, roster, permission to travel and insurance.</li><li>Players may be rostered to only one team. Playing for a second team results in 4-0 forfeits.</li><li>Up to 5 guest players, from the same Federation organization. Club pass players don't count toward the limit.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">02</span>Check-in &amp; pre-game</span></summary><ul><li>Complete the tournament check-in: upload player passes, medical releases and rosters to your GotSoccer team account.</li><li>Be at your field at least 30 minutes before every match. Passes are verified before each game.</li><li>Late players may enter once officials verify eligibility and the referee allows it.</li><li>15-minute grace period; without the minimum number of players (7 for 11v11), the game is a 4-0 forfeit.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">03</span>Format &amp; schedule</span></summary><ul><li>World Cup-style pool play, usually in groups of 4. Ties stand in group play.</li><li>Minimum 3 games guaranteed, maximum 6. Up to 2 games per day, with at least two time slots of rest between games.</li><li>4 to 32 teams per age group; multiple flights may be offered.</li><li>No overtime in semifinals or finals: penalty kicks decide a tie.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">04</span>Points &amp; tiebreakers</span></summary><ul><li>Win 3 points · Tie 1 point · Loss 0 points.</li><li>Tiebreakers, in order: head-to-head (two teams only), goal differential (max ±4 per game), fewest goals allowed, most goals scored (max 4 per game), penalty kicks.</li><li>Wild cards are compared by averages when groups differ in size.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">05</span>Laws of the game by age</span></summary><div class="tabla-r"><table><tr><th>Ages</th><th>Format</th><th>Ball</th><th>Referees</th></tr><tr><td>U9–U10</td><td>7v7 (min. 5)</td><td>Size 4</td><td>Center referee</td></tr><tr><td>U11–U12</td><td>9v9 (min. 6)</td><td>Size 4</td><td>Referee + 2 ARs</td></tr><tr><td>U13–U19</td><td>11v11 (min. 7)</td><td>Size 5</td><td>Referee + 2 ARs</td></tr></table></div><ul><li>Game roster: maximum 18 players. Unlimited substitutions at any stoppage, with the referee's permission.</li><li>No deliberate heading for U12 and younger (indirect free kick).</li><li>U9–U10: build-out line at 14 yards; goalkeepers may not punt or drop-kick.</li><li>Offside applies from U9 through U19. Game durations per age group are listed in the full rules.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">06</span>Equipment &amp; uniforms</span></summary><ul><li>Matching numbered uniforms. If colors clash, the home team (listed first) changes.</li><li>Shin guards required, fully covered by socks. Screw cleats allowed at the referee's discretion.</li><li>No jewelry; medical alert items must be taped. No orthopedic casts; soft braces only with a doctor's note.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">07</span>Health &amp; safety</span></summary><ul><li>Florida concussion law: a player with a possible head injury leaves the match and may not return without a doctor's clearance.</li><li>Mandatory hydration break at the midpoint of each half when the temperature reaches 85°F.</li><li>Athletic trainer on site. During weather delays, one team staff member reports to Tournament Headquarters.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">08</span>Conduct, discipline &amp; protests</span></summary><ul><li>Red card or ejection: out for the rest of the game and, at minimum, the next scheduled game.</li><li>Coaches are responsible for their fans; one sideline for teams, the opposite one for spectators.</li><li>No protests of referee judgment calls. Written protests within 1 hour, with a $200 non-refundable fee.</li><li>No smoking, alcohol, pets or disruptive noisemakers at the fields.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">09</span>Awards</span></summary><ul><li>Champions and runners-up: an individual award for every player plus a team award, presented on the trophy stage after the final.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">10</span>Refunds</span></summary><ul><li>No refunds once a team has been accepted.</li><li>Refunds within 5 days if a team is not accepted or the tournament is cancelled; within 10 days if a team withdraws before acceptance.</li><li>If an age group lacks teams, teams may play up or receive a full refund.</li></ul></details>
+    </div>
+    <div class="reglas-pie rev">
+      <a class="btn btn-oro" href="https://www.adidaschampionscup.com/_files/ugd/cfcd23_b65cf0874c8a47e4b526281e677efb77.pdf">Download full rules · PDF</a>
+      <small>The Tournament Committee's interpretation of the rules is final.</small>
     </div>
   </div>
 </section>
@@ -352,7 +401,7 @@ footer{background:var(--tinta);color:rgba(255,255,255,.75);padding:70px 0 30px;f
 <footer id="contact">
   <div class="env pie">
     <div><img src="assets/escudo_blanco.png" alt="Adidas Champions Cup"><p>March 5–7, 2027 · Tampa, Florida.<br>U8–U19 youth soccer tournament for boys and girls.</p></div>
-    <div><h5>Tournament</h5><ul><li><a href="https://system.gotsport.com/event_regs/1892df67f8">Register</a></li><li><a href="#divisions">Divisions &amp; fees</a></li><li><a href="https://www.adidaschampionscup.com/registration">Rules &amp; eligibility</a></li></ul></div>
+    <div><h5>Tournament</h5><ul><li><a href="https://system.gotsport.com/event_regs/1892df67f8">Register</a></li><li><a href="#divisions">Divisions &amp; fees</a></li><li><a href="#rules">Rules &amp; eligibility</a></li></ul></div>
     <div><h5>Info</h5><ul><li><a href="#venues">Venues</a></li><li><a href="#hotels">Hotels</a></li><li><a href="https://simaxsports.com/pages/adidas-champions-cup-2026">Store</a></li></ul></div>
     <div><h5>Contact</h5><ul><li><a href="mailto:contact@adidaschampionscup.com">contact@adidaschampionscup.com</a></li><li><a href="https://www.instagram.com/acsoccercup">Instagram @acsoccercup</a></li></ul></div>
   </div>
