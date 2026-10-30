@@ -421,7 +421,7 @@ if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.fo
 <script>
 /* 29-10: dentro de Wix (iframe) — barra no fija y los enlaces internos (#) se piden a la página de Wix por postMessage */
 (function(){if(window.self===window.top)return;document.documentElement.classList.add('en-wix');
- var st=document.createElement('style');st.textContent='.en-wix .hero{min-height:900px!important} @media (max-width:760px){.en-wix .hero{min-height:700px!important}}';document.head.appendChild(st);
+ var st=document.createElement('style');st.textContent='.en-wix .hero{min-height:900px!important} @media (max-width:760px){.en-wix .hero{min-height:700px!important}} html.en-wix,html.en-wix body{background:#0c0c0d}';document.head.appendChild(st);
  var b=document.getElementById('barra');if(b){b.style.position='absolute';b.classList.add('solido')}
  document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);
   var el=id?document.getElementById(id):document.body;if(!el)return;e.preventDefault();
