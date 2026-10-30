@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adidas Champions Cup · March 5–7, 2027 · Tampa, FL</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="The 4th edition of the Adidas Champions Cup: U8–U19 youth soccer tournament for boys and girls, March 5–7, 2027 in Tampa, Florida. Register your team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tinta:#0C0C0D; --tinta2:#16171A; --papel:#F3F1EC; --blanco:#FFFFFF; --oro:#C9A13B; --oro2:#E2BD5A;
+  --gris:#8A8C91; --linea:rgba(255,255,255,.14); --linea-osc:rgba(12,12,13,.12);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:16px/1.6 Inter,system-ui,sans-serif;color:var(--tinta);background:var(--papel)}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.env{max-width:1200px;margin:0 auto;padding:0 24px}
+.display{font-family:Anton,Impact,'Arial Narrow',sans-serif;font-weight:400;text-transform:uppercase;line-height:.92;letter-spacing:.005em}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;text-transform:none;letter-spacing:0}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-oro{background:var(--oro);color:var(--tinta)} .btn-oro:hover{background:var(--oro2)}
+.btn-claro{background:var(--papel);color:var(--tinta)}
+.btn-linea{border:1.5px solid currentColor}
+.flecha{font-size:16px;line-height:1}
+
+/* ---------- barra superior ---------- */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+header.solido{background:rgba(12,12,13,.92);backdrop-filter:blur(10px);border-color:var(--linea)}
+.barra{display:flex;align-items:center;justify-content:space-between;height:76px;color:var(--blanco)}
+.marca{display:flex;align-items:center;gap:14px}
+.marca img{height:46px;width:auto}
+.marca span{font-family:Anton,sans-serif;font-size:20px;letter-spacing:.04em;line-height:1}
+.marca small{display:block;font-family:Inter,sans-serif;font-size:10px;letter-spacing:.2em;color:var(--gris);margin-top:4px}
+nav ul{display:flex;gap:28px;list-style:none;padding:0}
+nav a{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+nav a:hover{opacity:1;color:var(--oro2)}
+.barra .btn{padding:11px 20px}
+.menu-btn{display:none;background:none;border:1px solid var(--linea);color:#fff;border-radius:10px;width:44px;height:44px;font-size:18px}
+
+/* ---------- hero con video ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:grid;place-items:center;text-align:center;color:var(--blanco);overflow:hidden;background:var(--tinta)}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,12,13,.55) 0%,rgba(12,12,13,.35) 45%,rgba(12,12,13,.9) 100%)}
+.hero .cont{position:relative;z-index:2;padding:120px 24px 80px}
+.hero .kicker{color:var(--oro2)}
+.hero h1{font-size:clamp(64px,13vw,190px);margin:14px 0 4px}
+.hero h1 .hueco{color:transparent;-webkit-text-stroke:2px var(--blanco);display:block}
+.hero .fechas{font-size:clamp(28px,4vw,46px);margin-top:18px}
+.hero .lugar{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:6px}
+.hero .acciones{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.hero .bajar{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;font-size:11px;letter-spacing:.3em;color:rgba(255,255,255,.6)}
+
+/* ---------- franja de datos ---------- */
+.datos{background:var(--tinta);color:var(--blanco);border-top:1px solid var(--linea)}
+.datos .fila{display:grid;grid-template-columns:repeat(4,1fr)}
+.dato{padding:44px 20px;text-align:center;border-left:1px solid var(--linea)}
+.dato:first-child{border-left:0}
+.dato b{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:clamp(40px,5vw,64px);line-height:1}
+.dato b sup{color:var(--oro);font-size:.45em;vertical-align:top;margin-left:2px}
+.dato span{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gris);display:block;margin-top:10px}
+
+/* ---------- secciones ---------- */
+section{padding:110px 0}
+.titulo{text-align:center;margin-bottom:56px}
+.titulo .kicker{color:var(--gris)}
+.titulo h2{font-size:clamp(46px,7vw,92px);margin-top:12px}
+.titulo h2 .serif{color:var(--oro);font-size:1.02em}
+.titulo p{max-width:620px;margin:16px auto 0;color:#55575C}
+
+/* divisiones */
+.divisiones{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.div-card{position:relative;border-radius:18px;overflow:hidden;min-height:470px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:34px;isolation:isolate}
+.div-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .6s}
+.div-card:hover img{transform:scale(1.05)}
+.div-card:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(12,12,13,.15) 20%,rgba(12,12,13,.92) 85%)}
+.div-card .num{position:absolute;top:22px;right:28px;font-family:Anton,sans-serif;font-size:90px;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.35)}
+.div-card .kicker{color:var(--oro2)}
+.div-card h3{font-size:clamp(44px,5vw,64px);margin:8px 0 14px}
+.div-card .meta{display:flex;gap:26px;border-top:1px solid var(--linea);padding-top:16px;flex-wrap:wrap}
+.div-card .meta div{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.div-card .meta b{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:30px;letter-spacing:.01em;color:#fff;text-transform:none}
+.arbitros{margin-top:22px;border:1px solid var(--linea-osc);border-radius:18px;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:#fff}
+.arbitros h4{font-size:12px;letter-spacing:.22em;text-transform:uppercase}
+.arbitros p{font-size:14px;color:#55575C;max-width:440px}
+.arbitros ul{display:flex;gap:30px;list-style:none;padding:0}
+.arbitros li{text-align:center;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
+.arbitros li b{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:28px;color:var(--tinta);letter-spacing:.01em}
+
+/* sobre el torneo */
+.sobre{display:grid;grid-template-columns:5fr 6fr;gap:70px;align-items:center}
+.sobre .foto{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5}
+.sobre .foto img{width:100%;height:100%;object-fit:cover}
+.sobre .foto .sello{position:absolute;left:22px;top:22px;background:var(--oro);color:var(--tinta);border-radius:999px;padding:7px 14px;font-size:11px;font-weight:700;letter-spacing:.16em}
+.sobre .foto .grande{position:absolute;left:26px;bottom:22px;color:#fff;font-size:clamp(54px,6vw,84px);text-shadow:0 2px 24px rgba(0,0,0,.4)}
+.sobre h2{font-size:clamp(42px,5.4vw,72px);margin:14px 0 22px}
+.sobre h2 .serif{color:var(--oro)}
+.sobre .lead{font-size:19px;color:var(--tinta);margin-bottom:16px}
+.sobre p{color:#55575C;margin-bottom:12px}
+.incluye{display:grid;grid-template-columns:1fr 1fr;gap:14px 26px;margin-top:26px;list-style:none;padding:0}
+.incluye li{display:flex;gap:12px;align-items:flex-start;font-size:15px;font-weight:500}
+.incluye li:before{content:"";flex:none;width:9px;height:9px;margin-top:8px;background:var(--oro);transform:rotate(45deg)}
+
+/* galería */
+.galeria{background:var(--tinta);color:#fff;padding:110px 0 90px;overflow:hidden}
+.galeria .titulo p{color:rgba(255,255,255,.65)}
+.galeria .titulo .kicker{color:var(--oro2)}
+.tira{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 24px 18px;scrollbar-width:thin}
+.tira figure{flex:none;width:clamp(240px,28vw,380px);aspect-ratio:4/5;border-radius:14px;overflow:hidden;scroll-snap-align:start;position:relative}
+.tira figure.ancha{width:clamp(320px,46vw,640px);aspect-ratio:auto}
+.tira img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.tira figure:hover img{transform:scale(1.04)}
+
+/* sedes */
+.sedes{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.sede{background:#fff;border:1px solid var(--linea-osc);border-radius:18px;padding:34px}
+.sede .kicker{color:var(--gris)}
+.sede h3{font-size:clamp(34px,3.6vw,46px);margin:10px 0 12px}
+.sede p{color:#55575C;font-size:15px}
+.sede a{display:inline-flex;gap:8px;margin-top:18px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border-bottom:1.5px solid var(--oro);padding-bottom:3px}
+
+/* hoteles */
+.hotel{background:var(--oro);color:var(--tinta);border-radius:22px;padding:56px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.hotel h2{font-size:clamp(44px,5.6vw,76px)}
+.hotel p{font-size:16px;margin-top:14px;max-width:560px}
+.hotel .contacto{font-size:14px;margin-top:14px;opacity:.85}
+.hotel .der{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.hotel .btn{background:var(--tinta);color:#fff}
+
+/* patrocinadores */
+.patro{display:flex;justify-content:center;align-items:center;gap:70px;flex-wrap:wrap;padding:10px 0}
+.patro img{height:74px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.85;transition:filter .3s,opacity .3s}
+.patro img:hover{filter:none;opacity:1}
+.patro .adidas{font-family:Inter,sans-serif;font-weight:700;font-size:40px;letter-spacing:-.03em}
+
+/* cierre */
+.cierre{position:relative;color:#fff;text-align:center;padding:150px 0;overflow:hidden;isolation:isolate}
+.cierre img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.cierre:before{content:"";position:absolute;inset:0;background:rgba(12,12,13,.7);z-index:-1}
+.cierre .kicker{color:var(--oro2)}
+.cierre h2{font-size:clamp(66px,12vw,170px);margin:16px 0 10px}
+.cierre h2 .hueco{color:transparent;-webkit-text-stroke:2px #fff}
+.cierre p{max-width:560px;margin:0 auto 34px;color:rgba(255,255,255,.8)}
+.cierre .acciones{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+footer{background:var(--tinta);color:rgba(255,255,255,.75);padding:70px 0 30px;font-size:14px}
+.pie{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.pie img{height:70px;width:auto;margin-bottom:16px}
+.pie h5{font-family:Anton,sans-serif;font-weight:400;font-size:15px;letter-spacing:.14em;color:var(--oro2);margin-bottom:14px;text-transform:uppercase}
+.pie ul{list-style:none;padding:0;display:grid;gap:8px}
+.pie a:hover{color:#fff}
+.copy{border-top:1px solid var(--linea);margin-top:50px;padding-top:24px;text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+
+/* aparición suave */
+.rev{opacity:1;transform:none;transition:opacity .8s,transform .8s}
+.js .rev.oculto{opacity:0;transform:translateY(26px)}
+
+
+
+/* reglas */
+.reglas-cab{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.reglas-cab .titulo{text-align:left;margin:0}
+.reglas-cab .titulo p{margin:14px 0 0}
+.nota-2026{display:inline-block;background:#fff4d6;color:#7a5a00;border:1px solid #ecd28a;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:600}
+.reglas{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.regla{background:#fff;border:1px solid var(--linea-osc);border-radius:14px;overflow:hidden}
+.regla summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:14px;font-weight:700;font-size:15px}
+.regla summary::-webkit-details-marker{display:none}
+.regla summary .n{font-family:Anton,sans-serif;font-weight:400;color:var(--oro);font-size:20px;margin-right:12px}
+.regla summary:after{content:"+";font-size:22px;color:var(--gris);transition:transform .2s}
+.regla[open] summary:after{transform:rotate(45deg)}
+.regla ul{padding:0 22px 20px 40px;margin:0;color:#45474C;font-size:14.5px;display:grid;gap:7px}
+.regla .tabla-r{overflow-x:auto;padding:0 22px 14px}
+.regla table{border-collapse:collapse;font-size:14px;width:100%;min-width:380px}
+.regla td,.regla th{border-bottom:1px solid var(--linea-osc);padding:8px 6px;text-align:left}
+.regla th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.reglas-pie{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:24px}
+.reglas-pie small{color:var(--gris)}
+
+/* aviso de propuesta (solo para la revisión) */
+.aviso{position:fixed;left:16px;bottom:16px;z-index:60;background:#fff;color:var(--tinta);border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.25);padding:12px 16px;font-size:13px;max-width:330px;line-height:1.45}
+.aviso b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--oro);margin-bottom:2px}
+.aviso button{position:absolute;top:6px;right:8px;background:none;border:0;font-size:16px;cursor:pointer;color:var(--gris)}
+
+/* ---------- móvil ---------- */
+@media (max-width:900px){
+  .reglas{grid-template-columns:1fr}
+  nav,.barra .btn{display:none}
+  .menu-btn{display:block}
+  header.abierto nav{display:block;position:absolute;top:76px;left:0;right:0;background:rgba(12,12,13,.97);padding:10px 24px 24px}
+  header.abierto nav ul{flex-direction:column;gap:0}
+  header.abierto nav a{display:block;padding:14px 0;border-bottom:1px solid var(--linea);font-size:14px}
+  .datos .fila{grid-template-columns:1fr 1fr}
+  .dato:nth-child(3){border-left:0}
+  .dato{border-top:1px solid var(--linea)}
+  .divisiones,.sedes,.sobre,.hotel,.pie{grid-template-columns:1fr}
+  .sobre{gap:40px}
+  .hotel{padding:36px 26px}
+  section{padding:80px 0}
+  .incluye{grid-template-columns:1fr}
+  .div-card{min-height:420px;padding:26px}
+  .patro{gap:40px}
+  .patro img{height:54px}
+}
+@media (max-width:480px){
+  .marca span{font-size:16px}
+  .marca img{height:38px}
+  .hero h1 .hueco{-webkit-text-stroke:1.5px #fff}
+  .arbitros ul{gap:18px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header id="barra">
+  <div class="env barra">
+    <a href="#inicio" class="marca"><img src="assets/escudo_blanco.png" alt="Adidas Champions Cup"><span>ADIDAS<br>CHAMPIONS CUP<small>TAMPA · 2027</small></span></a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#divisions">Divisions & Fees</a></li>
+      <li><a href="#about">Tournament</a></li>
+      <li><a href="#venues">Venue</a></li>
+      <li><a href="#rules">Rules</a></li>
+      <li><a href="https://simaxsports.com/pages/adidas-champions-cup-2026" target="_blank" rel="noopener">Store</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <a class="btn btn-oro" href="https://system.gotsport.com/event_regs/1892df67f8" target="_blank" rel="noopener">Register <span class="flecha">→</span></a>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('barra').classList.toggle('abierto')">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="inicio" style="padding:0">
+  <img class="poster" src="assets/hero_poster.jpg" alt="">
+  <video autoplay muted loop playsinline poster="assets/hero_poster.jpg"><source src="assets/hero.mp4" type="video/mp4"></video>
+  <div class="cont">
+    <div class="kicker">4th Edition · Tampa, Florida</div>
+    <h1 class="display">Adidas<span class="hueco">Champions Cup</span></h1>
+    <div class="fechas display">March 5–7, 2027</div>
+    <div class="lugar">Tournament Sportsplex of Tampa Bay · U8–U19 · Boys &amp; Girls</div>
+    <div class="acciones">
+      <a class="btn btn-oro" href="https://system.gotsport.com/event_regs/1892df67f8" target="_blank" rel="noopener">Register your team <span class="flecha">→</span></a>
+      <a class="btn btn-linea" href="#divisions">Divisions &amp; fees</a>
+    </div>
+  </div>
+  <div class="bajar">SCROLL</div>
+</section>
+
+<div class="datos">
+  <div class="env fila">
+    <div class="dato"><b>4<sup>TH</sup></b><span>Edition</span></div>
+    <div class="dato"><b>U8–U19</b><span>Age groups</span></div>
+    <div class="dato"><b>3<sup>+</sup></b><span>Games guaranteed</span></div>
+    <div class="dato"><b>1</b><span>Premier complex in Tampa Bay</span></div>
+  </div>
+</div>
+
+<section id="divisions">
+  <div class="env">
+    <div class="titulo rev"><div class="kicker">— Divisions &amp; Fees —</div><h2 class="display">Choose your <span class="serif">division</span></h2><p>U9 Future Stars through U19, open to boys and girls. Every team plays at least three games, with 1st and 2nd place awards in every division.</p></div>
+    <div class="divisiones">
+      <a class="div-card rev" href="https://system.gotsport.com/event_regs/1892df67f8" target="_blank" rel="noopener">
+        <img src="assets/g_accion_rosa.jpg" alt="Young player striking the ball at the 2026 Adidas Champions Cup">
+        <div class="num">01</div>
+        <div class="kicker">U8 — U12</div>
+        <h3 class="display">Youth<br>Division</h3>
+        <div class="meta"><div>Team fee<b>$895</b></div><div>Formats<b>7v7 · 9v9</b></div><div style="align-self:end;color:var(--oro2);font-weight:700">Register →</div></div>
+      </a>
+      <a class="div-card rev" href="https://system.gotsport.com/event_regs/1892df67f8" target="_blank" rel="noopener">
+        <img src="assets/g_trofeo_atardecer.jpg" alt="Older players lifting the champions trophy">
+        <div class="num">02</div>
+        <div class="kicker">U13 — U19</div>
+        <h3 class="display">Elite<br>Division</h3>
+        <div class="meta"><div>Team fee<b>$1,195</b></div><div>Format<b>11v11</b></div><div style="align-self:end;color:var(--oro2);font-weight:700">Register →</div></div>
+      </a>
+    </div>
+    <div class="arbitros rev">
+      <div><h4>Referee fees</h4><p>Per team, covering every tournament game: group stage, playoffs and finals. Total fees, not per game.</p></div>
+      <ul><li><b>$105</b>7v7</li><li><b>$205</b>9v9</li><li><b>$265</b>11v11</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:#fff">
+  <div class="env sobre">
+    <div class="foto rev">
+      <img src="assets/about_capitan.jpg" alt="Captain holding the 2026 Adidas Champions Cup trophy">
+      <div class="sello">CHAMPIONS · 2026</div>
+      <div class="grande display">Yours<br>to win</div>
+    </div>
+    <div class="rev">
+      <div class="kicker" style="color:var(--gris)">— About the tournament —</div>
+      <h2 class="display">Where champions <span class="serif">are crowned.</span></h2>
+      <p class="lead">The Adidas Champions Cup returns to Tampa for its 4th edition: three days of high-level youth soccer, from the first whistle to the trophy stage.</p>
+      <p>Every game is played in one place: the Tournament Sportsplex of Tampa Bay, the best complex in Tampa Bay, with top-quality fields. Vendors, families and the trophy stage make it a 360° experience, not just a tournament, with the best teams in Florida competing for the title.</p>
+      <ul class="incluye">
+        <li>3 games minimum, guaranteed</li>
+        <li>1st &amp; 2nd place awards</li>
+        <li>Open to boys and girls</li>
+        <li>Professional tournament management</li>
+        <li>Points system &amp; real competition</li>
+        <li>The best teams in Florida</li>
+        <li>Vendors &amp; a full family experience</li>
+        <li>Top level facilities and fields</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="titulo rev"><div class="kicker">— 2026 Edition —</div><h2 class="display">Relive <span class="serif">the weekend</span></h2><p>Every team, every goal, every celebration on the trophy stage.</p></div>
+  <div class="tira">
+    <figure class="ancha"><img src="assets/cta_trofeo_chispas.jpg" alt="Team celebrating with the trophy and sparks on stage"></figure>
+    <figure><img src="assets/g_disparo.jpg" alt="Player taking a shot"></figure>
+    <figure><img src="assets/g_campeones_negro.jpg" alt="Champions lifting the trophy"></figure>
+    <figure><img src="assets/g_portero.jpg" alt="Player on the field"></figure>
+    <figure class="ancha"><img src="assets/g_arco_welcome.jpg" alt="Welcome to the Champions Cup arch"></figure>
+    <figure><img src="assets/g_salto_amarillo.jpg" alt="Team jumping with the trophy"></figure>
+    <figure><img src="assets/g_coaches.jpg" alt="Player with two coaches"></figure>
+  </div>
+</section>
+
+<section id="venues">
+  <div class="env">
+    <div class="titulo rev"><div class="kicker">— The venue —</div><h2 class="display">One complex. <span class="serif">World-class fields.</span></h2></div>
+    <div class="sedes">
+      <div class="sede rev"><div class="kicker">Tampa, Florida</div><h3 class="display">Tournament Sportsplex of Tampa Bay</h3><p>The best soccer complex in Tampa Bay and home to elite tournaments: high-quality fields, top-notch amenities and the whole tournament in one place for players and families.</p><p style="margin-top:10px">9330 E Columbus Dr, Tampa, FL 33619</p><a href="https://maps.google.com/?q=Tournament+Sportsplex+of+Tampa+Bay" target="_blank" rel="noopener">Get directions →</a></div>
+      <div class="sede rev"><div class="kicker">More than a tournament</div><h3 class="display">A 360° weekend</h3><ul class="incluye" style="grid-template-columns:1fr;margin-top:6px"><li>Quality fields in a large, high-level complex</li><li>Vendors and food all weekend long</li><li>Parents and families on every sideline</li><li>Professional tournament management</li><li>The best teams in Florida</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOTEL OCULTO (29-10, Alessandro: sin información 2027 todavía)
+<section id="hotels" style="padding-top:0">
+  <div class="env">
+    <div class="hotel rev">
+      <div>
+        <div class="kicker">Stay-to-play tournament</div>
+        <h2 class="display">Book your stay</h2>
+        <p>Teams traveling more than 75 miles must reserve their hotel through our official partner, HBC Event Services, with discounted rates for tournament families.</p>
+        <p class="contacto">Questions or limited availability: 505-346-0522 · support@hbceventservices.com</p>
+      </div>
+      <div class="der">
+        <a class="btn" href="https://booking.roomvy.com/events/e951b1f6-60e4-4d09-ab55-05d2b6719aa7" target="_blank" rel="noopener">Book hotel <span class="flecha">→</span></a>
+        <a class="btn btn-linea" href="#rules">Rules &amp; eligibility</a>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+
+<section id="rules" style="background:var(--papel)">
+  <div class="env">
+    <div class="reglas-cab rev">
+      <div class="titulo"><div class="kicker">— Rules &amp; Eligibility —</div><h2 class="display">Tournament <span class="serif">rules</span></h2><p>Everything teams need to know before kickoff. Tap a topic to open it.</p></div>
+      <span class="nota-2026">2027 rules</span>
+    </div>
+    <div class="reglas">
+      <details class="regla" open><summary><span><span class="n">01</span>Registration &amp; eligibility</span></summary><ul><li>Open to teams of properly registered youth players from all Federation organizations (USYS, US Club, FYSA Super-Y, etc.), in good standing with their association.</li><li>All players and coaches need current, valid, laminated passes with photo, date of birth and registrar signature.</li><li>State Associations or Federation Affiliates certify eligibility, roster, permission to travel and insurance.</li><li>Players may be rostered to only one team. Playing for a second team results in 4-0 forfeits.</li><li>Up to 5 guest players, from the same Federation organization. Club pass players don't count toward the limit.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">02</span>Check-in &amp; pre-game</span></summary><ul><li>Complete the tournament check-in: upload player passes, medical releases and rosters to your GotSoccer team account.</li><li>Be at your field at least 30 minutes before every match. Passes are verified before each game.</li><li>Late players may enter once officials verify eligibility and the referee allows it.</li><li>15-minute grace period; without the minimum number of players (7 for 11v11), the game is a 4-0 forfeit.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">03</span>Format &amp; schedule</span></summary><ul><li>World Cup-style pool play, usually in groups of 4. Ties stand in group play.</li><li>Minimum 3 games guaranteed, maximum 6. Up to 2 games per day, with at least two time slots of rest between games.</li><li>4 to 32 teams per age group; multiple flights may be offered.</li><li>No overtime in semifinals or finals: penalty kicks decide a tie.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">04</span>Points &amp; tiebreakers</span></summary><ul><li>Win 3 points · Tie 1 point · Loss 0 points.</li><li>Tiebreakers, in order: head-to-head (two teams only), goal differential (max ±4 per game), fewest goals allowed, most goals scored (max 4 per game), penalty kicks.</li><li>Wild cards are compared by averages when groups differ in size.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">05</span>Laws of the game by age</span></summary><div class="tabla-r"><table><tr><th>Ages</th><th>Format</th><th>Ball</th><th>Referees</th></tr><tr><td>U9–U10</td><td>7v7 (min. 5)</td><td>Size 4</td><td>Center referee</td></tr><tr><td>U11–U12</td><td>9v9 (min. 6)</td><td>Size 4</td><td>Referee + 2 ARs</td></tr><tr><td>U13–U19</td><td>11v11 (min. 7)</td><td>Size 5</td><td>Referee + 2 ARs</td></tr></table></div><ul><li>Game roster: maximum 18 players. Unlimited substitutions at any stoppage, with the referee's permission.</li><li>No deliberate heading for U12 and younger (indirect free kick).</li><li>U9–U10: build-out line at 14 yards; goalkeepers may not punt or drop-kick.</li><li>Offside applies from U9 through U19. Game durations per age group are listed in the full rules.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">06</span>Equipment &amp; uniforms</span></summary><ul><li>Matching numbered uniforms. If colors clash, the home team (listed first) changes.</li><li>Shin guards required, fully covered by socks. Screw cleats allowed at the referee's discretion.</li><li>No jewelry; medical alert items must be taped. No orthopedic casts; soft braces only with a doctor's note.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">07</span>Health &amp; safety</span></summary><ul><li>Florida concussion law: a player with a possible head injury leaves the match and may not return without a doctor's clearance.</li><li>Mandatory hydration break at the midpoint of each half when the temperature reaches 85°F.</li><li>Athletic trainer on site. During weather delays, one team staff member reports to Tournament Headquarters.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">08</span>Conduct, discipline &amp; protests</span></summary><ul><li>Red card or ejection: out for the rest of the game and, at minimum, the next scheduled game.</li><li>Coaches are responsible for their fans; one sideline for teams, the opposite one for spectators.</li><li>No protests of referee judgment calls. Written protests within 1 hour, with a $200 non-refundable fee.</li><li>No smoking, alcohol, pets or disruptive noisemakers at the fields.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">09</span>Awards</span></summary><ul><li>Champions and runners-up: an individual award for every player plus a team award, presented on the trophy stage after the final.</li></ul></details>
+      <details class="regla"><summary><span><span class="n">10</span>Refunds</span></summary><ul><li>No refunds once a team has been accepted.</li><li>Refunds within 5 days if a team is not accepted or the tournament is cancelled; within 10 days if a team withdraws before acceptance.</li><li>If an age group lacks teams, teams may play up or receive a full refund.</li></ul></details>
+    </div>
+    <div class="reglas-pie rev">
+      <a class="btn btn-oro" href="assets/ACC_2027_RULES.pdf" target="_blank" rel="noopener">Download 2027 rules · PDF</a>
+      <small>The Tournament Committee's interpretation of the rules is final.</small>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;padding:80px 0">
+  <div class="env">
+    <div class="titulo" style="margin-bottom:34px"><div class="kicker">— Partners —</div><h2 class="display" style="font-size:clamp(36px,4.6vw,56px)">In great company</h2></div>
+    <div class="patro">
+      <span class="adidas">adidas</span>
+      <img src="assets/sponsor_tampa_sports_authority.png" alt="Tampa Sports Authority">
+      <img src="assets/sponsor_picture_pros.png" alt="Picture Pros">
+    </div>
+  </div>
+</section>
+
+<section class="cierre">
+  <img src="assets/g_campeones_negro.jpg" alt="">
+  <div class="env">
+    <div class="kicker">— Ready to compete? —</div>
+    <h2 class="display">The trophy<br><span class="hueco">is waiting.</span></h2>
+    <p>Join the best teams in Florida on March 5–7, 2027 at the Tournament Sportsplex of Tampa Bay.</p>
+    <div class="acciones"><a class="btn btn-oro" href="https://system.gotsport.com/event_regs/1892df67f8" target="_blank" rel="noopener">Register your team <span class="flecha">→</span></a><a class="btn btn-linea" href="https://www.instagram.com/acsoccercup" target="_blank" rel="noopener">Follow @acsoccercup</a></div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="env pie">
+    <div><img src="assets/escudo_blanco.png" alt="Adidas Champions Cup"><p>March 5–7, 2027 · Tampa, Florida.<br>U8–U19 youth soccer tournament for boys and girls.</p></div>
+    <div><h5>Tournament</h5><ul><li><a href="https://system.gotsport.com/event_regs/1892df67f8" target="_blank" rel="noopener">Register</a></li><li><a href="#divisions">Divisions &amp; fees</a></li><li><a href="#rules">Rules &amp; eligibility</a></li></ul></div>
+    <div><h5>Info</h5><ul><li><a href="#venues">Venue</a></li><li><a href="https://simaxsports.com/pages/adidas-champions-cup-2026" target="_blank" rel="noopener">Store</a></li></ul></div>
+    <div><h5>Contact</h5><ul><li><a href="mailto:contact@adidaschampionscup.com">contact@adidaschampionscup.com</a></li><li><a href="https://www.instagram.com/acsoccercup" target="_blank" rel="noopener">Instagram @acsoccercup</a></li></ul></div>
+  </div>
+  <div class="env copy">© 2027 Adidas Champions Cup · All rights reserved</div>
+</footer>
+
+<script>
+const barra=document.getElementById('barra');
+const pinta=()=>barra.classList.toggle('solido',scrollY>40);addEventListener('scroll',pinta,{passive:true});pinta();
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>barra.classList.remove('abierto')));
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('oculto');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rev').forEach(el=>{const r=el.getBoundingClientRect();if(r.top>innerHeight)el.classList.add('oculto');io.observe(el)});}
+</script>
+<script>
+/* 29-10: dentro de Wix (iframe) — barra no fija y los enlaces internos (#) se piden a la página de Wix por postMessage */
+(function(){if(window.self===window.top)return;document.documentElement.classList.add('en-wix');
+ var b=document.getElementById('barra');if(b){b.style.position='absolute';b.classList.add('solido')}
+ document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);
+  var el=id?document.getElementById(id):document.body;if(!el)return;e.preventDefault();
+  var y=Math.max(0,Math.round(el.getBoundingClientRect().top+window.scrollY));window.parent.postMessage({acc:'scroll',y:y},'*')},true);
+ var alto=function(){window.parent.postMessage({acc:'alto',h:document.documentElement.scrollHeight},'*')};addEventListener('load',alto);setTimeout(alto,2500)})();
+</script>
+</body>
+</html>
